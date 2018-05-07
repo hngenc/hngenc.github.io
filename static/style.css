@@ -6,3 +6,12 @@
 .caption {
 	font-style: italic;
 }
+
+#icons {
+	font-size: 2.5em;
+}
+
+#icons .fa {
+	margin-right: 3px;
+	margin-left: 3px;
+}
