@@ -22,22 +22,31 @@
         <div class="row">
             <div class="col-sm-4">
                 <img src="static/me.jpg" class="img-responsive img-rounded" />
-                <div class="caption text-center">Me enjoying a sunny beachside vacation in the middle of winter.</div>
+                <div class="caption text-center">A sunny beachside vacation in the middle of winter.</div>
                 <div id="icons" class="text-center">
                     <a href="https://github.com/hngenc" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
                     <a href="https://scholar.google.com/citations?user=BFeOm8sAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
                     <a href="https://www.linkedin.com/in/hngenc/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
                     <a href="static/resume.pdf" target="_blank" title="Resume"><i class="fa fa-file-text"></i></a>
                 </div>
+                <div class="text-center">
+                    <a href="index.html"><h4>About Me</h4></a>
+                    <a href="index.html#research"><h4>Research Interests</h4></a>
+                    <a href="pubs.html"><h4>Publications</h4></a>
+                </div>
             </div>
 
             <div class="col-sm-8">
                 <h2>About Me</h2>
-                <p>I'm a PhD candidate at the University of California, Berkeley, where I'm advised by <a href="https://people.eecs.berkeley.edu/~krste/">Krste Asanović</a> (and also collaborate very closely with <a href="https://people.eecs.berkeley.edu/~ysshao/">Sophia Shao</a>). Currently, I'm working on the <a href="https://github.com/ucb-bar/gemmini">Gemmini</a> project. Gemmini is a platform that we're building for full-system, full-stack evaluation of DNN accelerator workloads. In the past, I've also contributed to the <a href="https://chisel.eecs.berkeley.edu/">Chisel</a> hardware construction language, and to <a href="https://github.com/harvard-edge/MAVBench">MAVBench</a>, an end-to-end benchmarking platform for drone applications.</p>
+                <p>I'm a PhD candidate at the University of California, Berkeley, where I'm advised by <a href="https://people.eecs.berkeley.edu/~krste/">Krste Asanović</a> (and also collaborate very closely with <a href="https://people.eecs.berkeley.edu/~ysshao/">Sophia Shao</a>). I co-design hardware and software for dense and sparse DNNs (and other types of workloads), and release tools to help other people do that more easily.</p>
+
+                <!--<p>I lead the development of <a href="https://github.com/ucb-bar/gemmini">Gemmini</a>, a platform for full-system, full-stack evaluation of DNN accelerator workloads. I also lead the development of a soon-to-be-open-sourced platform for <i>sparse</i> accelerator design. In the past, I've contributed to the <a href="https://chisel.eecs.berkeley.edu/">Chisel</a> hardware construction language, and to <a href="https://github.com/harvard-edge/MAVBench">MAVBench</a>, an end-to-end benchmarking platform for drone applications.</p>-->
 
                 <p>My research interests include the design of hardware accelerators for DNN workloads, as well as the design of programming interfaces for such accelerators. I am also interested in agile hardware design methodologies.</p>
 
                 <p>You can find my resume <a href="static/resume.pdf" target="_blank">here</a>, or a full list of my publications <a href="pubs.html">here</a>.</p>
+
+                <p><b>I will be graduating this summer, so I am now looking for full-time jobs.</b></p>
 
                 <h2>Education</h2>
                 <ul>
@@ -54,13 +63,68 @@
                     <li><b>CAPSHER Technology</b>, <i>Software Developer Intern</i>, 2016
                 </ul>
 
-                <h2>Selected Publications</h2>
+                <h2 id="research">Research Interests</h2>
 
+                <div class="row research">
+                    <div class="col-sm-3">
+                        <a href="https://github.com/ucb-bar/gemmini"><img src="static/gemmini.png" class="img-responsive img-rounded" /></a>
+                    </div>
+
+                    <div class="col-sm-9">
+                    <h4>Designing Accelerators</h4>
+                    <p>I am extremely interested in frameworks and DSLs that make it easier to design, explore, and evaluate domain-specific accelerators. As part of the <a href="https://github.com/ucb-bar/gemmini">Gemmini</a> project, I explored how architects and researchers can investigate the full impact of SoC resource contention, programming-stack inefficiencies, context switches, virtual address translation, and other "full-system" interactions on the performance, efficiency, and correctness of DNN workloads running on hardware accelerators.</p>
+
+                    <p>Recently, I have also been building a platform which enables architects to rapidly specify and generate accelerators for <i>sparse</i> workloads. <!--Our platform generates synthesizable Verilog implementations of hardware accelerators which are comparable in performance and efficiency to some hand-designed works, while making the design specification and exploration process much simpler.--> This work will soon be open-sourced, along with a paper discussing our findings.</p>
+
+                    <p><i>Selected Publications:</i> <a href="https://arxiv.org/abs/1911.09925">DAC 2021</a> <i>(Best Paper Award)</i>, <a href="https://ieeexplore.ieee.org/document/9567768">ESSCIRC 2021</a></p>
+                    </div>
+                </div>
+
+                <div class="row research">
+                    <div class="col-sm-3">
+                        <a href="https://exo-lang.dev/"><img src="http://www.gilbertbernstein.com/images/exo_code_tile.png" class="img-responsive img-rounded" /></a>
+                    </div>
+
+                    <div class="col-sm-9">
+                    <h4>Scheduling</h4>
+                    <p>Making hardware is only a small part of the story; writing software that runs efficiently on it can be much harder! I've been involved in various projects that attempt to map software workloads efficiently onto specialized hardware accelerators, whether through automated techniques or through <a href="https://exo-lang.dev/">more expressive programming languages</a>.</p>
+
+                    <p><i>Selected Publications:</i> <a href="https://people.eecs.berkeley.edu/~ysshao/assets/papers/moca-hpca2023.pdf">HPCA 2023</a>, <a href="https://dl.acm.org/doi/pdf/10.1145/3519939.3523446">PLDI 2022</a>, <a href="https://arxiv.org/abs/2005.13685">arXiv 2020</a></p>
+                    </div>
+                </div>
+
+                <div class="row research">
+                    <div class="col-sm-3">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10247993"><img src="static/attention-mask.png" class="img-responsive img-rounded" /></a>
+                    </div>
+
+                    <div class="col-sm-9">
+                        <h4>Transformers</h4>
+                        <p>Transformers' high memory bandwidth requirements, diverse activation functions, and (in some cases) poor scalability can make them challenging to run efficiently on modern hardware. I've helped investigate the <a href="https://arxiv.org/abs/2302.14017">"full-stack optimization"</a> of transformer workloads, from model configuration down to hardware design and software mapping. I've also gotten my hands dirty implementing my own <a href="https://ieeexplore.ieee.org/abstract/document/10247993">hardware-friendly sparsity formats</a> for transformer workloads.
+
+                        <p><i>Selected Publications:</i> <a href="https://ieeexplore.ieee.org/abstract/document/10247993">DAC 2023</a>, <a href="https://arxiv.org/abs/2302.14017"> arXiv 2023</a></p>
+                    </div>
+                </div>
+
+                <div class="row research">
+                    <div class="col-sm-3">
+                        <a href="https://github.com/harvard-edge/MAVBench"><img src="static/drone.png" class="img-responsive img-rounded" /></a>
+                    </div>
+
+                    <div class="col-sm-9">
+                        <h4>Drones</h4>
+                        <p>Back when I was an undergrad, I worked with <a href="https://scholar.harvard.edu/vijay-janapa-reddi/home">Vijay Janapa Reddi</a> to investigate the compute requirements of autonomous robots (and flying drones in particular). Robots have a lot of interesting compute trade-offs that may be counter-intuitive to someone who has only worked on "stationary" computers like laptops or servers in the cloud. We created a benchmarking platform, <a href="https://github.com/harvard-edge/MAVBench">MAVBench</a>, to help computer architects make sense of those trade-offs.
+
+                        <p><i>Selected Publications:</i> <a href="https://dl.acm.org/doi/abs/10.1145/3511210">TOCS 2022</a>, <a href="https://ieeexplore.ieee.org/document/8574594">MICRO 2018</a>, <a href="https://ieeexplore.ieee.org/document/8259431">IEEE Micro 2018</a>, <a href="https://ieeexplore.ieee.org/document/8119717">IEEE Micro 2017</a></p>
+                    </div>
+                </div>
+
+                <!--<h2>Selected Publications</h2>
                 <ul>
                     <li> <b>DNN Accelerators:</b> <a href="https://ieeexplore.ieee.org/abstract/document/10247993">DAC 2023</a>, <a href="https://arxiv.org/abs/2302.14017"> arXiv 2023</a>, <a href="https://arxiv.org/abs/1911.09925">DAC 2021</a> <b>(Best Paper)</b>, <a href="https://ieeexplore.ieee.org/document/9567768">ESSCIRC 2021</a>
                     <li> <b>Scheduling:</b> <a href="https://people.eecs.berkeley.edu/~ysshao/assets/papers/moca-hpca2023.pdf">HPCA 2023</a>, <a href="https://dl.acm.org/doi/pdf/10.1145/3519939.3523446">PLDI 2022</a>, <a href="https://arxiv.org/abs/2005.13685">arXiv 2020</a>
                     <li> <b>Drones:</b> <a href="https://dl.acm.org/doi/abs/10.1145/3511210">TOCS 2022</a>, <a href="https://ieeexplore.ieee.org/document/8574594">MICRO 2018</a>, <a href="https://ieeexplore.ieee.org/document/8259431">IEEE Micro 2018</a>, <a href="https://ieeexplore.ieee.org/document/8119717">IEEE Micro 2017</a>
-                </ul>
+                </ul>-->
 
                 <h2>Quotes</h2>
                 <ul>

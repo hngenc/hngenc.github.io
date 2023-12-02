@@ -19,3 +19,8 @@
     padding-left: 5%;
 }
 
+.research {
+    display: flex;
+    align-items: center;
+}
+
